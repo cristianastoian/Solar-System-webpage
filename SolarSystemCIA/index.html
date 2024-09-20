@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+   <!-- fontawesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <title>Solar System by CIA</title>
+
+    <!-- javascript-->
+    <script type="text/javascript" src="script.js"></script>
+    
+      <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+</head>
+<body>
+
+ 
+
+<canvas id="videoCanvas" width="500" height="281"></canvas>
+
+
+
+
+<video id= "sunVideo" class="vids" width="350" height="270" controls>
+  <source src="Sun.mp4" type="video/mp4">
+  </video>
+
+  <video id= "mercuryVideo" class="vids" width="320" height="240" controls>
+    <source src="Mercury.mp4" type="video/mp4">
+    </video>
+
+<video id= "venusVideo" class="vids" width="320" height="240" controls>
+  <source src="Venus.mp4" type="video/mp4">
+  </video>
+  <video id= "earthVideo" class="vids" width="320" height="240" controls>
+    <source src="Earth.mp4" type="video/mp4">
+</video>
+
+<video id= "marsVideo" class="vids" width="320" height="240" controls>
+    <source src="Mars.mp4" type="video/mp4">
+</video>
+
+<video id= "jupiterVideo" class="vids" width="320" height="240" controls>
+    <source src="Jupiter.mp4" type="video/mp4">
+</video>
+
+<video id= "saturnVideo"  class="vids" width="320" height="240" controls>
+    <source src="Saturn.mp4" type="video/mp4">
+</video>
+
+<video id= "uranusVideo" class="vids" width="320" height="240" controls>
+    <source src="Uranus.mp4" type="video/mp4">
+</video>
+
+<video id= "neptuneVideo" class="vids" width="320" height="240" controls>
+    <source src="Neptune.mp4" type="video/mp4">
+</video>
+
+
+    <!--the sun-->
+    <div class="solar-system">
+        <img id="sun" src="sun.jpg"/>
+        <!--mercury-->
+        <div class="orbit mercury-orbit"></div>
+        <div class="mercury-spin">
+            <img id="mercury" src="mercury.jpg"/>
+        </div>
+        <!--venus-->
+        <div class="orbit venus-orbit"></div>
+        <div class="venus-spin">
+            <img id="venus" src="venus.jpg"/>
+        </div>
+        <!--earth-->
+        <div class="orbit earth-orbit"></div>
+        <div class="earth-spin">
+            <!--moon-->
+            <div class="orbit moon-orbit"></div>
+            <div class="moon-spin">
+                <div id="moon"></div>
+            </div>
+            <img id="earth"
+                src="earth.jpg" />
+        </div>
+        <!--mars-->
+        <div class="orbit mars-orbit"></div>
+        <div class="mars-spin">
+            <img id="mars" src="mars.jpg"/>
+        </div>
+        <!--jupiter-->
+        <div class="orbit jupiter-orbit"></div>
+        <div class="jupiter-spin">
+            <img id="jupiter" src="jupiter.jpg"/>
+        </div>
+        <!--saturn-->
+        <div class="orbit saturn-orbit"></div>
+        <div class="saturn-spin">
+            <img id="saturn" src="saturn.jpg"/>
+        </div>
+        <!--uranus-->
+        <div class="orbit uranus-orbit"></div>
+        <div class="uranus-spin">
+            <img id="uranus" src="uranus.jpg"/>
+        </div>
+        <!--neptune-->
+        <div class="orbit neptune-orbit"></div>
+        <div class="neptune-spin">
+            <img id="neptune" src="neptune.jpg"/>
+        </div>
+    </div>
+  
+  
+
+    
+  <!--buttons to provide information(LAST VERSION): -->
+  
+  <button type="button" id="sun-button" class="btn btn-secondary"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Sun"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Our Sun is a 4.5 billion-year-old yellow dwarf star – a hot glowing ball of hydrogen and helium – at the center of our solar system. It’s about 93 million miles (150 million kilometers) from Earth and it’s our solar system’s only star. Without the Sun’s energy, life as we know it could not exist on our home planet.The Sun has been called by many names. The Latin word for Sun is “sol,” which is the main adjective for all things Sun-related: solar. Helios, the Sun god in ancient Greek mythology, lends his name to many Sun-related terms as well, such as heliosphere and helioseismology.The Sun could not harbor life as we know it because of its extreme temperatures and radiation. Yet life on Earth is only possible because of the Sun’s light and energy.">Sun
+  </button>
+  <button type="button" class="btn btn-secondary"id="mercury-button"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Planet Mercury"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Mercury's surface temperatures are both extremely hot and cold. Because the planet is so close to the Sun,
+   day temperatures can reach highs of 800°F (430°C). Without an atmosphere to retain that heat at night, temperatures can dip
+    as low as -290°F (-180°C).
+  Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus,
+  thanks to its dense atmosphere. But Mercury is the fastest planet, zipping around the Sun every 88 Earth days.
+  Mercury is appropriately named for the swiftest of the ancient Roman gods.Mercury's environment is not conducive to life as we
+   know it. The temperatures and solar radiation that characterize this planet are most likely too extreme for organisms to adapt to.">
+      Mercury
+  </button>
+  <button type="button" class="btn btn-secondary"id="venus-button"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Planet Venus"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Similar in structure and size to Earth, Venus spins slowly in the opposite direction from most planets.
+  Its thick atmosphere traps heat in a runaway greenhouse effect, making it the hottest planet in our solar system with
+  surface temperatures hot enough to melt lead.
+  Venus is named for the ancient Roman goddess of love and beauty, who was known as Aphrodite to the ancient Greeks. Most
+  features on Venus are named for women. Venus, the third brightest object after the Sun and Moon, was named after the Roman goddess of love and beauty.
+    It’s the only planet named after a female god.
+  At the tops of Venus’ clouds, whipped around the planet by winds measured as high as 224 mph (360 kph), we find another
+  transformation. Persistent, dark streaks appear. Scientists are so far unable to explain why these streaks remain stubbornly
+  intact, even amid hurricane-force winds. ">
+      Venus
+  </button>
+  <button type="button"  class="btn btn-secondary"id="earth-button"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Earth"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Earth—our home planet—is the third planet from the Sun, and the only place we know of so far that’s
+  inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.While Earth is
+  only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface.
+   Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of
+    rock and metal.
+  Earth is the only planet in the Solar System whose English name does not come from Greek or Roman mythology.
+  The name was taken from Old English and Germanic. It simply means the ground. There are, of course, many names for our planet in the thousands of languages spoken by the people of the third planet from the Sun.">
+      Earth
+  </button>
+  <button type="button" class="btn btn-secondary"id="mars-button"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Planet Mars"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Mars is one of the most explored bodies in our solar system, and it's the only planet where we've sent rovers to roam
+  the alien landscape. NASA missions have found lots of evidence that Mars was much wetter and warmer, with a thicker atmosphere,
+  billions of years ago.
+  Mars was named by the Romans for their god of war because its reddish color was reminiscent of blood. The Egyptians called it Her Desher,
+   meaning the red one.
+  Even today, it is frequently called the Red Planet because iron minerals in the Martian dirt oxidize, or rust, causing the surface to
+  look red.Scientists don't expect to find living things currently thriving on Mars. Instead, they're looking for signs of life that existed long ago,
+  when Mars was warmer and covered with water.">
+      Mars
+  </button>
+  <button type="button" class="btn btn-secondary"id="jupiter-button"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Planet Jupiter"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Jupiter's stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of
+   hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.
+  
+  
+  Jupiter is named for the king of the ancient Roman gods.Jupiter’s environment is probably not conducive to life as we know it.
+   The temperatures, pressures, and materials that characterize this planet are most likely too extreme and volatile for organisms
+   to adapt to.
+  
+  
+  While planet Jupiter is an unlikely place for living things to take hold, the same is not true of some of its many moons.
+   Europa is one of the likeliest places to find life elsewhere in our solar system. There is evidence of a vast ocean just beneath
+    its icy crust, where life could possibly be supported.​">
+      Jupiter
+  </button>
+  <button type="button" class="btn btn-secondary"id="saturn-button"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Planet Saturn"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Saturn is the sixth planet from the Sun and the second-largest planet in our solar system. Like fellow gas giant Jupiter,
+   Saturn is a massive ball made mostly of hydrogen and helium. Saturn is not the only planet to have rings, but none are as spectacular
+   or as complex as Saturn's. Saturn also has dozens of moons.
+  
+  
+  From the jets of water that spray from Saturn's moon Enceladus to the methane lakes on smoggy Titan, the Saturn system is a rich source
+       of scientific discovery and still holds many mysteries.The farthest planet from Earth discovered by the unaided human eye, Saturn
+       has been known since ancient times. The planet is named for the Roman god of agriculture and wealth, who was also the father of
+        Jupiter.">
+      Saturn
+  </button>
+  <button type="button"class="btn btn-secondary"id="uranus-button"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Planet Uranus"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Uranus is a very cold and windy world. The ice giant is surrounded by 13 faint rings and 27 small moons. Uranus rotates
+  at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin sideways, orbiting the Sun like a
+  rolling ball.
+  
+  
+  Uranus was the first planet found with the aid of a telescope. It was discovered in 1781 by astronomer William Herschel, although he
+  originally thought it was either a comet or a star. It was two years later that the object was universally accepted as a new planet,
+  in part because of observations by astronomer Johann Elert Bode.William Herschel tried unsuccessfully to name his discovery Georgium
+  Sidus after King George III. Instead, the planet was named for Uranus, the Greek god of the sky, as suggested by Johann Bode.">
+      Uranus
+  </button>
+  <button type="button" class="btn btn-secondary"id="neptune-button"
+  data-bs-container="body"
+  data-bs-toggle="popover"
+  data-bs-custom-class="custom-popover"
+  data-bs-title="Facts about The Planet Neptune"
+  data-bs-placement="right"
+  data-bs-trigger="focus"
+  data-bs-content="Dark, cold, and whipped by supersonic winds, ice giant Neptune is the eighth and most distant planet in our solar system.
+   More than 30 times as far from the Sun as Earth, Neptune is the only planet in our solar system not visible to the naked eye.
+   In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.
+  
+  
+  Neptune is so far from the Sun that high noon on the big blue planet would seem like dim twilight to us. The warm light we see here on
+  our home planet is roughly 900 times as bright as sunlight on Neptune.The ice giant Neptune was the first planet located through mathematical
+  calculations. Using predictions made by Urbain Le Verrier, Johann Galle discovered the planet in 1846. The planet is named after the
+  Roman god of the sea, as suggested by Le Verrier.">
+      Neptune
+  <span class="info-neptune"> insert info about neptune</span>
+  </button>
+  
+</body>
+</html>
